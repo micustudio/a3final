@@ -8,9 +8,17 @@ var bodyParser = require('body-parser');
 
 var dbConfig = require('./db/db.js');
 var mongoose = require('mongoose');
+//added below
+require('./models/GraphData');
+
 mongoose.connect(dbConfig.url);
 
+var routes = require('./routes/index');
+var users = require('./routes/users');
 var app = express();
+
+//added below
+mongoose.connect('mongodb://localhost/graph-data-db/');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,6 +54,7 @@ initPassport(passport);
 
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
