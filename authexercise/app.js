@@ -5,20 +5,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var dbConfig = require('./db/db.js');
 var mongoose = require('mongoose');
 //added below
 require('./models/GraphData');
+var dbConfig = require('./db/db.js');
 
 mongoose.connect(dbConfig.url);
+mongoose.createConnection('mongodb://localhost/graph-data-db/');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var app = express();
-
-//added below
-mongoose.connect('mongodb://localhost/graph-data-db/');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
