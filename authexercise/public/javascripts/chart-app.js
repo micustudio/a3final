@@ -9,7 +9,7 @@ app.controller('MainController', ['$scope', '$http',  function($scope, $http) {
   var table = google.visualization.arrayToDataTable(dataArray, false);
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
   
-  var options = {'title':'Company Sales', curveType: 'function', legend: { position: 'bottom' }}
+  var options = {'title':'PEETS HOLIDAY Week Sales', curveType: 'function', legend: { position: 'bottom' }}
   chart.draw(table, options);
 
   });

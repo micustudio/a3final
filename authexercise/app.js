@@ -6,12 +6,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/graph-data-db/');
 //added below
 require('./models/GraphData');
 var dbConfig = require('./db/db.js');
 
-mongoose.connect(dbConfig.url);
-mongoose.createConnection('mongodb://localhost/graph-data-db/');
+
+mongoose.createConnection(dbConfig.url);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

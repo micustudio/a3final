@@ -1,22 +1,37 @@
 [
   {
-    "Year":2004,
-    "Sales":1000,
-    "Expenses":400
+    "Day":1,
+    "Sales":3436,
+    "employeeExpenses": 1450
   },
   {
-    "Year":2005,
-    "Sales":1170,
-    "Expenses":460
+    "Day":2,
+    "Sales":5467,
+    "employeeExpenses":2150
   },
   {
-    "Year":2006,
-    "Sales":660,
-    "Expenses":1120
+    "Day":3,
+    "Sales":4897,
+    "employeeExpenses":2200
   },
   {
-    "Year":2007,
-    "Sales":1030,
-    "Expenses":540
+    "Day":4,
+    "Sales":4355,
+    "employeeExpenses":2100
+  },
+  {
+    "Day":5,
+    "Sales":5900,
+    "employeeExpenses":2400
+  },
+  {
+    "Day":6,
+    "Sales":6784,
+    "employeeExpenses":2350
+  },
+  {
+    "Day":6,
+    "Sales":2143,
+    "employeeExpenses":1050
   }
 ]
